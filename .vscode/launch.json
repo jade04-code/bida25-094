@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open About.html",
+            "file": "c:\\Users\\Jade\\OneDrive - Botswana Accountancy College\\Documents\\My Assignments semester 2026\\WMD Assignment website\\About.html"
+        }
+    ]
+}
