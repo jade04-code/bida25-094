@@ -68,6 +68,23 @@ body{
         transform: translateY(0) scale(1);
     }
 }
+button{
+    width: 65px;
+    height:45px;
+    border:2px solid #3809e2;
+    background:whitesmoke;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    margin: 30px;
+}
+button:hover{
+    background-color: #2609e2;
+    color: white;
+    box-shadow: #190a9f 0px 4px 8px;
+    border: #190ebf 2px solid;
+}
 
 
 
