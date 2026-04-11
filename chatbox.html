@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
@@ -27,8 +28,22 @@
   </li>
   <li class="nav-item">
     <a class="nav-link" href="Contact.html">Contact us</a>
-  </li>
-  
+  </li> 
 </ul>
+<main>
+  <div class="chat-container">
+    <header>
+      <h2>chatBot Panel</h2>
+      <h1>chat with Bot</h1>
+    </header>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="message-user-message">hello👋</div>
+    <div class="message-bot-message">Hello there! how can i help you?</div>
+  </div>
+  <div class="input-area">
+    <input type="text" id="user-input" placeholder="Query here....">
+    <button id="send-btn">Send</button>
+  </div>
+</main>
     </body>
 </html>
