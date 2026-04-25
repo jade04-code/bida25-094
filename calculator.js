@@ -16,45 +16,45 @@ calculateEMI.onclick=(e) => {
 
     let isYear=document.getElementById('year').checked;
     let isMonth=document.getElementById('month').checked;
-    let numberOfMonths=0;
+    let numberOfMonths = 0;
 
-    if(isMonth=="" && isYear==""){
-        alert("Please select Either Month or year");
+    if(isMonth== '' && isYear== ''){
+        alert('Please select Either Month or year');
         return;
     }else{
-        if (isYear==true) {
+        if (isYear == true){
             numberOfMonths= RepaymentPeriod.value * 12;
         }
         else
             numberOfMonths= RepaymentPeriod.value;
     }
 
-    let r= parseFloat(interestRate.value) / 100 / 12;
+    let r= parseFloat(interestRate.value)/100/12;
     let p =loanAmount.value;
     let n= numberOfMonths;
 
-    let emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    let emi = (p * r * Math.pow( (1 + r), n)) / (Math.pow((1 + r), n) - 1);
     document.getElementById('result').innerHTML = "Your EMI is: " + emi.toFixed(2);
     let totalInterest = (emi * n) - p;
-    let totalPayment = emi * n;
+    let totalPayment = totalInterest + parseFloat(p);
 
-    document.getElementById('emi').innerHTML = "" + Math.round(emi);
+    document.getElementById('emi').innerHTML = '' +Math.round(emi);
     
-    document.getElementById('totalInterest').innerHTML = "Total Interest Paid: " + totalInterest.toFixed(2);
+    document.getElementById('totalInterest').innerHTML = '' +Math.round (totalInterest)
    
-    document.getElementById('totalPayment').innerHTML = "Total Payment: " + totalPayment.toFixed(2);
-};
+    document.getElementById('totalPayment').innerHTML = '' +Math.round (totalPayment)
+}
 let clear=document.getElementById('clear');
 
-loanAmount.value="";
-interestRate.value="";
-RepaymentPeriod.value="";
+loanAmount.value='';
+interestRate.value='';
+RepaymentPeriod.value='';
 
 document.getElementById('year').checked=true;
 
-document.getElementById('emi').innerHTML="";
-document.getElementById('totalInterest').innerHTML="";
-document.getElementById('totalPayment').innerHTML="";
+document.getElementById('emi').innerHTML='';
+document.getElementById('totalInterest').innerHTML='';
+document.getElementById('totalPayment').innerHTML='';
 
 clearRecords,onclick=(e) => {
     e.preventDefault();

@@ -10,38 +10,80 @@
   </head>
     <body>
         <ul class="nav nav-pills nav-fill">
-           <img src="logo.jpg" alt="Letshego Holdings Limited" class="logo">Letshego Holdings Limited
+           <img src="logo.png" alt="Letshego Holdings Limited" class="logo">Letshego Holdings Limited
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+    <a class="nav-link active" aria-current="page" href="index.html" style="color: black;">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="About.html">About</a>
+    <a class="nav-link" href="About.html" style="color: black;">About</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="Calculator.html">Loan Calculator</a>
+    <a class="nav-link" href="Calculator.html" style="color: black;">Loan Calculator</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="Apply.html">Apply Now</a>
+    <a class="nav-link" href="Apply.html" style="color: black;">Apply Now</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="chatbox.html">Chatbot</a>
+    <a class="nav-link" href="chatbox.html" style="color: black;">Chatbot</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="Contact.html">Contact us</a>
+    <a class="nav-link" href="Contact.html" style="color: black;">Contact us</a>
   </li>
   </ul>
   <button class="login-button"><a href="login.html">Login</a></button>
   <main>
     <div class="img-text">
-    <img src="background 3.jpg" alt="Home-background" style="width:100%; height: 500px; margin-top: 25px; border-radius: 0%;">
+    <img src="Hero.jpg" alt="Home-background" style="width:100%; height: 500px; margin-top: 25px; border-radius: 0%;">
   <div class="content-text">
     <h1>Welcome to <span style="color: orange;">Letshego</span> LoanMaster</h1>
     <p>Your trusted partner for smart borrowing. Explore our range of loan options, tailored to satisfy your pocket financially.</p>
     <input type="text" id="user-input" placeholder="search">
-     <button type="Submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+     <button type="Submit" style="width: 50px;"><i class="fa-solid fa-magnifying-glass"></i></button>
      </div>
   </div>
   </main>
+
+  <section>
+  <div class="wrapper">
+ <div class="stat-container">
+<i class="fa-solid fa-people-group"></i>
+<span class="num" data-val="340">000</span>
+<span class="text">Employees</span>
+ </div>
+
+ <div class="stat-container">
+<i class="fa-solid fa-circle-check"></i>
+<span class="num" data-val="225">000</span>
+<span class="text">Loans Approved</span>
+ </div>
+ 
+ <div class="stat-container">
+<i class="fa-solid fa-headset"></i>
+<span class="num" data-val="400">000</span>
+<span class="text">Customers</span>
+ </div>
+  </div>
+  <script>
+    let valueDisplays = document.querySelectAll(".num");
+let interval = 5000;
+
+valueDisplays.forEach((valueDisplay) => {
+  let dtartValue = 0;
+  let endValue = ParseInt(valueDisplay.getAttribute 
+    ("data-val"));
+    let duration = Math.floor(interval/ endValue);
+    let counter = setInterval( function() {
+    startValue += 1;
+    valueDisplay.textcontent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+     }
+    }, duration);
+});
+
+  </script>
+  </section>
+
   <footer>
     <div class="container">
       <div class="footer">
@@ -64,8 +106,5 @@
       </div>
   </footer>
     </body>
-<<<<<<< HEAD
    </html>
-=======
 </html>
->>>>>>> 0828f1611d5f41b7a796f5dbb90ad0e7b4aae8e5
