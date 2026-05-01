@@ -1,63 +1,36 @@
-document.querySelectorAll('input[type="number"]').forEach(input => {
-    inputNumber.oninput = () => {
-        if(inputNumber.value.length > inputNumber.maxlength) {
-            inputNumber.value = inputNumber.value.slice(0, inputNumber.maxlength);
-        }
+// ── COUNTER UP ANIMATION ──────────────────────────
+const counters = document.querySelectorAll('.num');
+
+const animateCounter = (counter) => {
+  const target = parseInt(counter.getAttribute('data-val'));
+  const duration = 2000; // 2 seconds
+  const stepTime = 20;   // update every 20ms
+  const steps = duration / stepTime;
+  const increment = target / steps;
+  let current = 0;
+
+  const timer = setInterval(() => {
+    current += increment;
+
+    if (current >= target) {
+      counter.textContent = target.toLocaleString() + '+';
+      clearInterval(timer);
+    } else {
+      counter.textContent = Math.floor(current).toLocaleString();
     }
-});
-
-let loanAmount= document.getElementById('amount');
-let interestRate= document.getElementById('interest');
-let RepaymentPeriod=document.getElementById('period');
-let calculateEMI=document.getElementById('calculate');
-
-calculateEMI.onclick=(e) => {
-    e.preventDefault();
-
-    let isYear=document.getElementById('year').checked;
-    let isMonth=document.getElementById('month').checked;
-    let numberOfMonths = 0;
-
-    if(isMonth== '' && isYear== ''){
-        alert('Please select Either Month or year');
-        return;
-    }else{
-        if (isYear == true){
-            numberOfMonths= RepaymentPeriod.value * 12;
-        }
-        else
-            numberOfMonths= RepaymentPeriod.value;
-    }
-
-    let r= parseFloat(interestRate.value)/100/12;
-    let p =loanAmount.value;
-    let n= numberOfMonths;
-
-    let emi = (p * r * Math.pow( (1 + r), n)) / (Math.pow((1 + r), n) - 1);
-    document.getElementById('result').innerHTML = "Your EMI is: " + emi.toFixed(2);
-    let totalInterest = (emi * n) - p;
-    let totalPayment = totalInterest + parseFloat(p);
-
-    document.getElementById('emi').innerHTML = '' +Math.round(emi);
-    
-    document.getElementById('totalInterest').innerHTML = '' +Math.round (totalInterest)
-   
-    document.getElementById('totalPayment').innerHTML = '' +Math.round (totalPayment)
-}
-let clear=document.getElementById('clear');
-
-loanAmount.value='';
-interestRate.value='';
-RepaymentPeriod.value='';
-
-document.getElementById('year').checked=true;
-
-document.getElementById('emi').innerHTML='';
-document.getElementById('totalInterest').innerHTML='';
-document.getElementById('totalPayment').innerHTML='';
-
-clearRecords,onclick=(e) => {
-    e.preventDefault();
-    recordsList.innerHTML="";
-    localStorage.removeItem('emi');
+  }, stepTime);
 };
+
+// ── TRIGGER WHEN SECTION IS VISIBLE ──────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => animateCounter(counter));
+      observer.disconnect(); // run only once
+    }
+  });
+}, { threshold: 0.3 });
+
+// Observe the wrapper section
+const wrapper = document.querySelector('.wrapper');
+if (wrapper) observer.observe(wrapper);

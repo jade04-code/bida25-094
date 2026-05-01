@@ -33,12 +33,12 @@
   <button class="login-button"><a href="login.html">Login</a></button>
   <main>
     <div class="img-text">
-    <img src="Hero.jpg" alt="Home-background" style="width:100%; height: 500px; margin-top: 25px; border-radius: 0%;">
+       <img src="Hero.jpg" alt="Home-background" style="width:100%; height: 500px; top: 0; margin-top: 25px; border-radius: 0%;">
+
   <div class="content-text">
     <h1>Welcome to <span style="color: orange;">Letshego</span> LoanMaster</h1>
     <p>Your trusted partner for smart borrowing. Explore our range of loan options, tailored to satisfy your pocket financially.</p>
-    <input type="text" id="user-input" placeholder="search">
-     <button type="Submit" style="width: 50px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input type="search" id="user-input" placeholder="search" ><i class="fa-solid fa-magnifying-glass"></i>
      </div>
   </div>
   </main>
@@ -64,23 +64,7 @@
  </div>
   </div>
   <script>
-    let valueDisplays = document.querySelectAll(".num");
-let interval = 5000;
-
-valueDisplays.forEach((valueDisplay) => {
-  let dtartValue = 0;
-  let endValue = ParseInt(valueDisplay.getAttribute 
-    ("data-val"));
-    let duration = Math.floor(interval/ endValue);
-    let counter = setInterval( function() {
-    startValue += 1;
-    valueDisplay.textcontent = startValue;
-    if (startValue == endValue) {
-      clearInterval(counter);
-     }
-    }, duration);
-});
-
+   
   </script>
   </section>
 
@@ -104,7 +88,8 @@ valueDisplays.forEach((valueDisplay) => {
       <div class="letshego-copyright">
         <p>&copy; 2024 Letshego Holdings Limited. All rights reserved.</p>
       </div>
-  </footer>
+    </footer>
+      <script src="calculator.js"></script>
     </body>
    </html>
 </html>
