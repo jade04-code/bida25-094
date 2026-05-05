@@ -12,17 +12,24 @@ section{
     justify-content: center;
     align-items: center;
     background-position: center;
-    background: linear-gradient(10deg,white, #aa8c51, #e6ddcc);
+   background: linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e293b,
+        #aa8c51,
+        #1e293b
+        );
     background-size: cover;
     backdrop-filter: blur(10px);
 }
 a{
     text-decoration:none;
-    color: rgb(101, 4, 130);
+    color:  #aa8c51;
 }
 
 a:hover{
-    color: #094ee2;
+    color:  #aa8c51;
     text-decoration: underline;
 }
 .login-box{ 
@@ -43,14 +50,14 @@ a:hover{
     position: relative;
     width: 310px;
     margin: 30px 0;
-    border-bottom: 2px solid #0938e2;
+    border-bottom: 2px solid  #aa8c51;
 }
 .input-box label{
     position: absolute;
     top:50%;
     left:5px;
     transform:translateY(-50%);
-    color: #0938e2;
+    color:  #aa8c51;
     font-size:1em ;
     color:whitesmoke;
     pointer-events:none;
@@ -69,7 +76,7 @@ a:hover{
     border:none;
     outline:none;
     font-size:1em;
-    color:#0938e2;
+    color: #aa8c51;
     text-align:center;
 }
 .input-box .icon{
@@ -83,7 +90,7 @@ line-height: 57px;
 button{
     width:100%;
     height:50px;
-    border:2px solid #3809e2;
+    border:2px solid  #aa8c51;
     background:whitesmoke;
     outline: none;
     cursor: pointer;
@@ -91,10 +98,10 @@ button{
     font-weight: bold;
 }
 button:hover{
-    background-color: #2609e2;
+    background-color:  #aa8c51;
     color: white;
-    box-shadow: #190a9f 0px 4px 8px;
-    border: #190ebf 2px solid;
+    box-shadow:  #aa8c51 0px 4px 8px;
+    border:  #aa8c51 2px solid;
 }
 .register-link ,.remember-forgot{
     margin-top: 20px;
@@ -120,7 +127,7 @@ h2{
     width: 140px;
     height: 70px;
     border-radius: 0 0 20px 20px;
-    background: #0926e2;
+    background:  #aa8c51;
     align-items: center;
     color:whitesmoke;
 }
@@ -161,80 +168,3 @@ header{
     text-shadow: #190ebf 2px 2px 4px;
 
 }
-/*This will only affect the chatbox but not affect the chatbox navbar*/
-      *{
-        margin: 0;
-        padding:0;
-        box-sizing: border-box;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
-      body{
-        color: rgb(31, 28, 28);
-        display:flex;
-        justify-content: center;
-        align-items: centre;
-        height:100vh;
-          background: linear-gradient(130deg,#F2E0D0, #436eb5, #F2E0D0);
-          background-size: cover;
-          background-attachment: fixed;
-          animation: fadeUp 1s linear;
-      }
-      .chat-container{
-        width: 400px;
-        border-radius: 10px;
-        padding: 20px;
-        height: 600px;
-        border: 2px solid rgba(0, 0, 255, 0.454);
-        flex-direction: column;
-        overflow: hidden;
-        border-radius: 15px;
-        backdrop-filter:blur(10px);
-        display: flex;
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      }
-.chat-box{
-    padding: 15px;
-    background:transparent;
-    flex: 1;
-    overflow-y: auto;
-}
-header{
-    color: white;
-    padding: 15px;
-    text-shadow: #190ebf 2px 2px 4px;
-    text-align: center;
-}
-.message{
-    padding: 10px;
-    line-height: 1.4;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    max-width: 80%;
-    box-shadow: #190ebf 2px 2px 4px;
-}
-.message-user-message{
-    background-color: #190ebf;
-    color: white;
-    align-self: flex-end;
-    margin-left: auto;
-}
-.message-bot-message{
-  background: #436eb5;
-  color:whitesmoke;
-  align-self: flex-end;
-}
-.input-area{
-  display: flex;
-  padding:10px;
-  background: whitesmoke;
-}
-
-
-
-
-
-
-
-
-
-
