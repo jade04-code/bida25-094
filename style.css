@@ -127,16 +127,19 @@ footer{
     padding-top: 50px;
     margin-top: 50px;
     bottom: 0;
+    width: 100%;
+    max-width: 2000px;
+    height:fit-content;
+     margin: 0 auto;
+     display: flex;
 }
 .container{
-    width: 1140px;
     margin: 0 auto;
     display: flex;
     justify-self: center;
     margin-top: 50px;
     bottom: 0;
-    height:80px;
-    color: #060606;
+    height: auto;
 }
 .footer{
     width: 100%;
@@ -145,7 +148,7 @@ footer{
 .content{
     width: 190px;
     margin: auto;
-    padding: 7px;
+    padding: 10px;
 
 }
 .letshego-copyright{
@@ -156,7 +159,7 @@ footer{
 }
 .letshego-copyright p{
     padding: 10px 0;
-    bottom: 0;
+    bottom: 0%;
     font-size: 14px;
 
 }
@@ -249,9 +252,10 @@ section{
 }
 /*contact form layout*/
 .Contact-container {
-    width: 40%;
+    width: 100%;
     height: 80%;
-    margin: 100px;
+    max-width: 500px;
+    margin: 0% auto;
     justify-content: center;
     align-items: center;
     border: darkgrey solid 2px;
@@ -327,6 +331,7 @@ table {
   min-width: 600px; /* prevents columns from squishing too small */
   border-collapse: collapse;
   font-size: 14px;
+  margin:0% auto;
 }
 
 th, td {
@@ -369,6 +374,7 @@ td a:hover {
   .table-wrapper {
     box-shadow: none;
     overflow-x: unset;
+    margin: 0% auto;
   }
 
   table, thead, tbody, th, td, tr {
@@ -452,7 +458,7 @@ transform:translate(-50%,-50%) scale(1);
  }
  /*Calculator*/
  .calculater-container{
-    min-width: 100vh;
+    min-width: 150vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -461,6 +467,7 @@ transform:translate(-50%,-50%) scale(1);
     margin-top: 30px;
     min-height: auto;
     box-shadow: 0 0 20px  #aa8c51;
+    width: 100%;
  }
  .calculater-container .row{
     width: 800px;
@@ -579,8 +586,9 @@ transform:translate(-50%,-50%) scale(1);
 
 /*Application form*/
 .Apply-form {
-    width: 40%;
-    height: 80%;
+    width: 100%;
+    height:auto;
+    max-width: 600px;
     margin: 100px;
     justify-content: fit-content;
     align-items: center;
@@ -589,22 +597,22 @@ transform:translate(-50%,-50%) scale(1);
     padding:20px;
     padding-top: 70px;
    box-shadow: 0 0 20px  #aa8c51;
-    backdrop-filter: blur(10px);
-    margin-left: 400px;
-
-}
-.Apply-form button{
-    width: 30%;
-    border-radius: 24px 6px;
-   color: #070708;
+    backdrop-filter: blur(15px);
+    margin: 0% auto;
 }
 option{
     background-color: #070708;
     color: #ebe8e6;
 }
+.radio{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 200px;
+}
 /*chatbox*/
 .chat-container{
-    width: 50%;
+    width: 100%;
+    max-width: 700px;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 20px;
@@ -668,4 +676,26 @@ outline: none;
     .input-area button{
         width: 250px;
     }
+}
+/*About page cards*/
+.card {
+    border: 2px solid #aa8c51;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #aa8c51;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 30%;
+    height: auto;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.card p{
+    color: #070303;
+    font-size: 14px;
+    margin-top: 10px;
 }
