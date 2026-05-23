@@ -7,6 +7,26 @@
     color: whitesmoke;
 }
 /*navbar*/
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 14px;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+        position: static;
+        display: flex;
+        padding: 20px 0;
+        
+    }
+    main{
+        margin-top: 400px;
+    }
+}
 .logo{
     background-size: contain;
     width: 45px;
@@ -149,19 +169,6 @@ footer{
     width: 190px;
     margin: auto;
     padding: 10px;
-
-}
-.letshego-copyright{
-    text-align: center;
-    font-size: 14px;
-    color:#070303;
-    padding: 0 10px;
-}
-.letshego-copyright p{
-    padding: 10px 0;
-    bottom: 0%;
-    font-size: 14px;
-
 }
 .fa-brands {
     color: #d6a608;
@@ -328,7 +335,7 @@ th{
 /* ── BASE TABLE STYLES ───────────────────────────── */
 table {
   width: 100%;
-  min-width: 600px; /* prevents columns from squishing too small */
+  min-width: 500px; /* prevents columns from squishing too small */
   border-collapse: collapse;
   font-size: 14px;
   margin:0% auto;
@@ -458,16 +465,14 @@ transform:translate(-50%,-50%) scale(1);
  }
  /*Calculator*/
  .calculater-container{
-    min-width: 150vh;
+    max-width: 700px;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    min-height: auto;
-    box-shadow: 0 0 20px  #aa8c51;
     width: 100%;
+    margin: 0% auto;
+     padding: 20px;
  }
  .calculater-container .row{
     width: 800px;
@@ -620,7 +625,7 @@ option{
     color:whitesmoke;
     justify-content: fit-content;
     align-items: center;
-    margin-left: 310px;
+   margin: 0% auto;
 }
 .chat-container h2{
     text-align: center;
@@ -646,13 +651,13 @@ option{
     line-height: 1.4;
 }
 .message-user-message{
-    background: #3719e0;
+    background: rgba(255, 255, 255, 0.35);
     color:#080808;
     align-self: flex-end;
     margin-left:auto;
 }
 .message-bot-message{
-     background: red;
+     background:#aa8c51;
      color: #020617;
      align-self: flex-start;
 }
@@ -671,7 +676,6 @@ outline: none;
     .Apply-form .chat-container .calculater-container{
         width: 100%;
         height: 100vh;
-        border: navy 2px solid;
     }
     .input-area button{
         width: 250px;
