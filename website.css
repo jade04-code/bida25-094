@@ -17,13 +17,18 @@
         align-items: center;
         gap: 10px;
         width: 100%;
-        display: flex;
-        margin-left: 0;
+        max-width: 80%;
+        margin-left: 60px;
         position: static;
         padding: 20px 0;
     }
     main{
-        margin-top: 400px;
+        margin-top: 300px;
+    }
+    body .login-button{
+        margin-right: 50px;
+        width: 100%;
+        max-width: 40%;
     }
 }
 /* Navbar */
@@ -856,8 +861,8 @@ outline: none;
   color: black;
   text-align: center;
   padding: 20px;
-  width: 100% !important;        /* full width on mobile */
-  max-width: 100% !important;    /* override the 30% on mobile */
+  width: 100% !important;        
+  max-width: 100% !important;    
   height: auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -892,7 +897,7 @@ outline: none;
 }
 
 .about-page .card .btn {
-  width: 100%;                   /* full-width button on mobile */
+  width: 100%;                   
   background-color: #aa8c51;
   border-color: #aa8c51;
   color: white;
@@ -904,56 +909,22 @@ outline: none;
   border-color: #8a6f3e;
 }
 
-/* ── Card container layout ── */
-.about-page main {
-  display: flex;
-  flex-direction: column;        /* stack vertically on mobile */
+@media (max-width: 576px) {
+  .about-page .card {
+    max-width: 600px !important; 
+    min-height: fit-content;
+    display: flex;
+  flex-direction: row;        
   align-items: center;
   gap: 1.2rem;
   padding: 1rem;
   width: 100%;
-}
 
-/* ── Tablet (≥576px) ── */
-@media (min-width: 576px) {
-  .about-page main {
-    flex-direction: row;
-    flex-wrap: wrap;             /* wrap cards into rows */
-    justify-content: center;
-  }
-
-  .about-page .card {
-    width: 45% !important;
-    max-width: 45% !important;
-  }
-
-  .about-page .card img,
-  .about-page .card .card-img-top {
-    height: 190px;
-  }
-
-  .about-page .card .btn {
-    width: auto;
   }
 }
-
-/* ── Desktop (≥992px) ── */
-@media (min-width: 992px) {
-  .about-page main {
+.wrapper {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;   /* align cards to the right */
-    align-items: flex-start;
-    padding-right: 2rem;
-  }
-
-  .about-page .card {
-    width: 28% !important;
-    max-width: 30% !important;   /* your original 30% */
-  }
-
-  .about-page .card img,
-  .about-page .card .card-img-top {
-    height: 210px;
-  }
+    margin:0 auto;
+    padding: 12px;
+    gap: 16px;
 }
