@@ -113,7 +113,42 @@
  <input type="file" name="documents" checked class="radio">
         <label for="No"></label>
   </div>
-        <button>Submit Application</button>
+        <button type="Submit" onclick="openPopup()">Submit Application</button>
+    <div class="popup" id="popup">
+      <img src="approved.png" alt="popup-img">
+      <h3>THANK YOU!!!</h3>
+      <p>your application is successfully delivered, we will swiftly get back to you🙏🏾😊.</p>
+     
+      <div class="rating">
+      <p style="font-weight: bold; color: #aa8c51;">Rate our website</p>
+<input type="radio" name="B" checked >
+        <label for="No">1⭐</label>
+
+<input type="radio" name="B" checked >
+        <label for="No">2⭐</label>
+
+<input type="radio" name="B" checked >
+        <label for="No">3⭐</label>
+  
+<input type="radio" name="B" checked >
+        <label for="No">4⭐</label>
+
+<input type="radio" name="B" checked >
+        <label for="No">5⭐</label>
+        
+        </div>
+    <button type="button" onclick="closePopup()">ok</button>
+    <script>
+    let popup=document.getElementById("popup");
+
+    function openPopup(){
+      popup.classList.add("open-popup");
+    }
+    function closePopup(){
+      popup.classList.remove("open-popup");
+    }
+
+  </script>
     </div>
     </div>
     

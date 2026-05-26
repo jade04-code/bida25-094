@@ -1,4 +1,3 @@
-// ── CALCULATE ─────────────────────────────────────
 document.getElementById('calculate').addEventListener('click', function () {
 
   const amount   = parseFloat(document.getElementById('amount').value);
@@ -6,10 +5,10 @@ document.getElementById('calculate').addEventListener('click', function () {
   const period   = parseFloat(document.getElementById('period').value);
   const isYear   = document.getElementById('year').checked;
 
-  // Clear any old error messages first
+  // Clear any old error messages first //
   clearErrors();
 
-  // ── VALIDATION (inline, no popups) ───────────────
+
   let hasError = false;
 
   if (!amount || isNaN(amount)) {
@@ -33,15 +32,15 @@ document.getElementById('calculate').addEventListener('click', function () {
     hasError = true;
   }
 
-  if (hasError) return; // Stop here, show errors in form
+  if (hasError) return; 
 
-  // ── CONVERT PERIOD TO MONTHS ──────────────────────
+  // CONVERT PERIOD TO MONTHS//
   const totalMonths = isYear ? period * 12 : period;
 
-  // ── MONTHLY INTEREST RATE ─────────────────────────
+  // MONTHLY INTEREST RATE //
   const monthlyRate = interest / 100 / 12;
 
-  // ── EMI FORMULA ───────────────────────────────────
+  // EMI CALCULATION //
   let emi;
   if (monthlyRate === 0) {
     emi = amount / totalMonths;
@@ -53,7 +52,7 @@ document.getElementById('calculate').addEventListener('click', function () {
   const totalPayment  = emi * totalMonths;
   const totalInterest = totalPayment - amount;
 
-  // ── DISPLAY IN OUTPUT BOXES ───────────────────────
+  //  OUTPUT BOXES CALCULATIONS //
   document.getElementById('emi').textContent =
     'BWP ' + formatNumber(emi);
 
@@ -64,7 +63,7 @@ document.getElementById('calculate').addEventListener('click', function () {
     'BWP ' + formatNumber(totalPayment);
 });
 
-// ── CLEAR BUTTON ──────────────────────────────────
+// FORM CLEAR BUTTON //
 document.getElementById('clear').addEventListener('click', function () {
   document.getElementById('amount').value   = '';
   document.getElementById('interest').value = '';
@@ -116,21 +115,4 @@ document.querySelectorAll('.input').forEach(function (input) {
     if (next && next.classList.contains('error-msg')) next.remove();
     if (this.value < 0) this.value = 0;
   });
-});
-//home page counter up//
- let valueDisplays = document.querySelectorAll(".num");
-let interval = 5000;
-
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute 
-    ("data-val"));
-    let duration = Math.floor(interval / endValue);
-    let counter = setInterval( function() {
-    startValue += 1;
-    valueDisplay.textcontent = startValue;
-    if (startValue == endValue) {
-      clearInterval(counter);
-     }
-    }, duration);
 });
