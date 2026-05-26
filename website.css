@@ -23,12 +23,13 @@
         padding: 20px 0;
     }
     main{
-        margin-top: 300px;
+        margin-top: 180px;
     }
-    body .login-button{
-        margin-right: 50px;
+    .login-button{
+        display: block;
         width: 100%;
-        max-width: 40%;
+        margin-bottom: 10px;
+        max-width: 200px;
     }
 }
 /* Navbar */
@@ -319,11 +320,14 @@ footer{
     size: 10ox;
     gap: 7px;
 }
+@media screen and (max-width:768px){
 .copyright-text {
     position: relative;
     margin: 0 auto;
     top: 75%;
-
+    display: block;
+    text-align: center;
+}
 }
 /*home page image text*/
 .img-text{
@@ -364,7 +368,7 @@ span.num{
     margin:40px;
     flex-wrap: wrap;
     align-items: center;
-    gap: 160px;
+    gap: 170px;
     justify-content: center;
     display: flex;
 }
@@ -573,7 +577,6 @@ td a:hover {
     border-bottom: none;
   }
 
-  /* Column label injected via data attribute */
   td::before {
     content: attr(data-label);
     font-weight: 700;
@@ -722,7 +725,6 @@ transform:translate(-50%,-50%) scale(1);
   letter-spacing: 0.5px;
 }
 
-/* Labels above each result */
 .box-output p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 13px;
